@@ -9,8 +9,9 @@ def swap_file_ext(filepath, newExt):
 
 def convert_svg_to_png(filepath):
   updatedFilepath = swap_file_ext(filepath=filepath, newExt="png")
-  with Image(filename=filepath, background=Color("transparent")) as img:
+  with Image(filename=filepath, background=Color("transparent"), resolution=144) as img:
     img.format = 'png'
+    img.compression_quality = 10
     img.save(filename=updatedFilepath)
   return updatedFilepath 
 
