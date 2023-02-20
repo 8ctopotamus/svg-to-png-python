@@ -2,7 +2,7 @@ import sys
 from helpers import get_filepaths_by_extension, convert_svgs_to_pngs
 
 def main():
-  rootdir = sys.argv[1] if 1 in sys.argv else "./test-images"
+  rootdir = sys.argv[1] if sys.argv[1] else "./test-images"
   print('Running SVG => PNG conversion in ' + rootdir)
   
   svgpaths = get_filepaths_by_extension(rootdir, 'svg')
