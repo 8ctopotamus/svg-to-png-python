@@ -25,8 +25,7 @@ def get_filepaths_by_extension(dir, ext):
   svgpaths = []
   for subdir, dirs, files in os.walk(dir):
     for file in files:
-      file = file.lower()
       filepath = os.path.join(subdir, file)
-      if (filepath.endswith(''+ext)):
+      if (filepath.lower().endswith(''+ext)):
         svgpaths.append(filepath)
   return svgpaths
