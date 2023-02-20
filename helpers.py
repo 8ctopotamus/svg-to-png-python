@@ -2,11 +2,13 @@ import os
 from wand.color import Color
 from wand.image import Image
 
-def swap_filename_ext(filepath, newExt):
-  print(vars(filepath.split('.')))
+def swap_file_ext(filepath, newExt):
+  splitpath = filepath.split('.')
+  splitpath.pop(len(splitpath)-1)
+  return '.'.join(splitpath) + '.' + newExt
 
 def convert_svg_to_png(filepath):
-  updatedFilepath = filepath + '.png' #.split('.svg')
+  updatedFilepath = swap_file_ext(filepath=filepath, newExt="png")
   with Image(filename=filepath, background=Color("transparent")) as img:
     img.format = 'png'
     img.save(filename=updatedFilepath)
