@@ -11,7 +11,10 @@ def main():
 
     print('\nAll done. Here are your generated PNG paths:')
     print('\n'.join(pngpaths))
+
+    sys.exit(0)
   except IndexError:
     print ("Missing filepath")
+    sys.exit(1)
 
 main()
