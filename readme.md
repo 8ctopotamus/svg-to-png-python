@@ -10,3 +10,4 @@ Run the following command in the root of the project:
 ## Requirements
 * [Python 3](https://www.python.org/)
 * [Install Wand & ImageMagik](https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-on-windows)
+* [Wand Resize Resolution](https://stackoverflow.com/questions/34617422/how-to-optimize-image-size-using-wand-in-python)
