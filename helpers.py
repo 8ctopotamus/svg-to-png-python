@@ -11,7 +11,7 @@ def convert_svg_to_png(filepath: str) -> str:
   updatedFilepath = swap_file_ext(filepath=filepath, newExt="png")
   with Image(filename=filepath, background=Color("transparent"), resolution=144) as img:
     img.format = 'png'
-    img.compression_quality = 10
+    # img.compression_quality = 10
     img.save(filename=updatedFilepath)
   return updatedFilepath 
 
