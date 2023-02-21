@@ -8,7 +8,7 @@ def main():
   svgpaths = get_filepaths_by_extension(rootdir, 'svg')
   pngpaths = convert_svgs_to_pngs(svgpaths)
 
-  print('All done. PNG paths:')
+  print('\nAll done. Here are your generated PNG paths:')
   print('\n'.join(pngpaths))
 
 main()
